@@ -1,0 +1,184 @@
+<?php
+/*
+ * Gomain 数据库操作
+ */
+include_once 'gomainDB.php';
+include_once 'api/memberCache.php';
+class GomainDBOperate{
+	
+	/*
+	 * 获取用户表 表名
+	 */
+	public function getUserTableName(){
+		return "WXGOMAIN_USER";
+	}
+	
+	/*
+	 * 获取Handle表 表名
+	 */
+	public function getHandleTableName(){
+		return "WXGOMAIN_HANDLE";
+	}
+	
+	/*
+	 * 获取Joke表 表名
+	 */
+	public function getJokeTableName(){
+		return "WXGOMAIN_JOKE";
+	}
+	
+	/*
+	 * 插入用户
+	 */
+	public function insert($weixinId,$weixinNm){
+		if(!empty($weixinId)){
+			$arr = array('WEIXINID' => $weixinId,'WEIXINNM' => $weixinNm,'CREATETIME' => date('y-m-d H:i:s',time()));
+			GomainDB::insert(self::getUserTableName(),$arr,true,false);
+		}
+	}
+	
+	/*
+	 * 修改用户
+	 */
+	public function update($weixinId,$weixinNm){
+		if(!empty($weixinId)){
+			$arr = array('WEIXINNM' => $weixinNm,'UPDATETIME' => date('y-m-d H:i:s',time()));
+			GomainDB::update(self::getUserTableName(),$arr,"`WEIXINID`='".$weixinId."'" ,true,false);
+		}
+	}
+	
+	/*
+	 * 根据微信ID查找用户信息
+	 */
+	public function findUserByWeixinId($weixinId){
+		if(!empty($weixinId)){
+			return GomainDB::fetchrow(self::getUserTableName(),"*","where `WEIXINID`='$weixinId'");
+		}
+		return null;
+	}
+	
+	/*
+	 * 添加用户,先查找用户是否存在
+	 */
+	public function addUser($weixinId,$weixinNm){
+		$arr = self::findUserByWeixinId($weixinId);
+		if(!empty($arr)){//已经有该用户了,查看微信昵称是否一致
+			//查看用户是否关闭账号
+			$ison = $arr['ISON'];
+			if($ison == 1){
+				//开启账号
+				self::setUserOn($weixinId);
+			}
+			if(!empty($weixinNm)){
+				$name = $arr['WEIXINNM'];
+				$ec = strcmp(trim($name),trim($weixinNm));
+				echo $ec;
+				if($ec != 0){//不相等
+					//修改昵称
+					self::update($weixinId,$weixinNm);
+				}
+			}
+		}else{//没有该用户
+			self::insert($weixinId,$weixinNm);
+		}
+	}
+	
+	/*
+	 * 关闭用户
+	 */
+	public function setUserOff($weixinId){
+		if(!empty($weixinId)){
+			$arr = array('ISON' => 1,'DELETETIME' => date('y-m-d H:i:s',time()));
+			GomainDB::update(self::getUserTableName(),$arr,"`WEIXINID`='".$weixinId."'" ,true,false);
+		}
+	}
+	
+	/*
+	 * 开启用户
+	 */
+	public function setUserOn($weixinId){
+		if(!empty($weixinId)){
+			$arr = array('ISON' => 0);
+			GomainDB::update(self::getUserTableName(),$arr,"`WEIXINID`='".$weixinId."'" ,true,false);
+		}
+	}
+	
+	/*
+	 * 更新用户的访问情况
+	 */
+	public function updateVisitCount($weixinId){
+		$sql = "UPDATE `WXGOMAIN_USER` SET VISITCOUNT=VISITCOUNT+1,TOTALCOUNT=TOTALCOUNT+1 WHERE `WEIXINID`='$weixinId'";
+		GomainDB::executeBySql($sql);
+	}
+	
+	/*
+	 * 分组统计用户访问量
+	 */
+	public function getUserCountGroupBy(){
+		//$sql = "SELECT ISON,WEIXINID,WEIXINNM,VISITCOUNT,TOTALCOUNT,CREATETIME,DELETETIME FROM `WXGOMAIN_USER` GROUP BY VISITCOUNT, TOTALCOUNT LIMIT 0 , 500";
+		$sql = "SELECT ISON,WEIXINID,WEIXINNM,VISITCOUNT,TOTALCOUNT,CREATETIME,DELETETIME FROM `WXGOMAIN_USER` LIMIT 0 , 500";
+		return GomainDB::queryBySql($sql,true);
+	}
+	
+	/*
+	 * 清空当日的访问量
+	 */
+	public function clearUserVisitCount(){
+		$sql = "UPDATE `WXGOMAIN_USER` SET VISITCOUNT = 0";
+		GomainDB::executeBySql($sql,false);
+	}
+	
+	/*
+	 * 添加
+	 */
+	public function addHandle($weixinId,$astro_code,$astro_name){
+		if(!empty($astro_code) && !empty($weixinId)){
+			//$arr = self::findHandleByWeixinId($weixinId);
+			//if(empty($arr)){
+				$arr = array('WEIXINID' => $weixinId,'ASTROCODE' => $astro_code,'ASTRONAME'=>$astro_name,'CREATETIME' => date('y-m-d H:i:s',time()));
+				GomainDB::insert(self::getHandleTableName(),$arr,true,false);
+			//}else{
+				/*$code = $arr["ASTROCODE"];
+				$ec = strcmp(trim($code),trim($astro_code));
+				if($ec !=0){//不相等
+					
+				}*/
+		//	}
+		} 
+	}
+	
+	/*
+	 * 修改
+	 */
+	public function updateHandle($weixinId,$astro_code,$astro_name){
+		if(!empty($astro_code) && !empty($weixinId)){
+			$arr = array('WEIXINID' => $weixinId,'ASTROCODE' => $astro_code,'ASTRONAME'=>$astro_name,'UPDATETIME' => date('y-m-d H:i:s',time()));
+			GomainDB::update(self::getHandleTableName(),$arr,"`WEIXINID`='$weixinId'",true,false);
+		}
+	}
+	
+	/*
+	 * 根据微信ID查找信息
+	*/
+	public function findHandleByWeixinId($weixinId){
+		if(!empty($weixinId)){
+			return GomainDB::fetchrow(self::getHandleTableName(),"*","where `WEIXINID`='$weixinId'");
+		}
+		return null;
+	}
+	
+	public function queryUserBySql($weixinId){
+		$sql = "select * from `".self::getUserTableName()."` where `WEIXINID` = '$weixinId'";
+		return GomainDB::queryBySql($sql,true);
+	}
+	
+	/*
+	 * 获取笑话
+	 */
+	public function findJokeRand(){
+		$sql = "select * from `".self::getJokeTableName()."`";
+		$arr = GomainDB::queryBySql($sql,true);
+		return $arr;
+	}
+}
+?>
