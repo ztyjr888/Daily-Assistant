@@ -1,0 +1,241 @@
+@import url(layout.css);
+#header dl{height:50px;}
+#menu .topnav{position:relative;top:136px;}
+#menu .astronav{position:relative;top:-30px;padding-top:16px;}
+.main_top .tbl,.main_top .tbc,.main_top .tbr, .querys button,.main_top dl dt a,#yunshi #fod1 div span,#yunshi #fod1 .on {
+	background:url(../../img/astro/makeup_1.gif) no-repeat;
+}
+.querys_1 h4{background-position:0 -52px;height:34px;font-size:14px;line-height:34px;padding-left:30px;}
+.cbt{overflow:hidden;}
+.main_top { margin:10px auto 0; width:990px; height:auto; overflow:hidden;}
+.main_top .tbl,.main_top .tbc,.main_top .tbr{ height:396px;}
+.main_top .toplist,.main_top .rightcol {background:url(../../img/astro/astro_tbg.gif) repeat-x;height:396px;}
+.main_top .tbl{width:10px; background-position:0 -80px; }
+.main_top .tbc{background-position:-10px -80px; width:26px;}
+.main_top .tbr{background-position:-36px -80px; width:10px;}
+.main_top .toplist{width: 637px;  }
+.main_top .rightcol{width:307px; background-position:0 -396px;  }
+.main_top .toplist .topbg{padding:0px 0; background:url(../../img/astro/astro_bg.jpg) no-repeat left bottom; height:384px; margin-top: 6px; overflow:hidden}
+.main_top .headstr {height:100px;  margin-top:2px; overflow:hidden;}
+.main_top .toplist  img{float:left; display:block; margin-right:20px;}
+.headitem{font-size:20px;font-weight:600; padding-top:12px; display:block;}
+.srecitem{font-size:14px;font-weight:100;line-height:28px; display:block;}
+.recitem{font-weight:100;line-height:20px;}
+.fc1 a,.srecitem{color:#C80868;}
+
+.main_top .line{ border-bottom:1px dashed #ddd}
+.main_top dl{float:left;width:307px;padding:10px 0 10px 10px;}
+.main_top dl dt{width:50px;background-position:-330px 0;float:left;margin-right:10px;text-align:center;margin-top:11px;}
+.main_top dl dt a{height:50px; width:50px; display:block;}
+.main_top .cl1 dt a{background-position:-150px -80px;}
+.main_top .cl2 dt a{background-position:-200px -80px;}
+.main_top .cl3 dt a{background-position:-250px -80px;}
+.main_top .cl4 dt a{background-position:-300px -80px;}
+.main_top .cl5 dt a{background-position:-350px -80px;}
+.main_top .cl6 dt a{background-position:-400px -80px;}
+
+.main_top dl dd{float:left; width: 245px; white-space: nowrap; overflow: hidden;}
+.main_top dl dd li{height:24px;line-height:24px;font-size:14px;}
+.main_top dl dd li a{color:#828282;}
+.main_top dl dd li a:hover{color:#2C74AB;}
+
+#yunshi{width:307px; background:url(../../img/astro/astro_bg.jpg) no-repeat 0 bottom; height:384px; overflow:hidden; padding: 6px 0 0 0}
+#fod1list1{float:left;width:260px; height:auto; overflow:hidden; padding-left:10px;}
+#yunshi #fod1{width:32px; background:#FFDCEA; height:378px; padding-top: 6px; overflow:hidden}
+#yunshi #fod1 div{height:30px;padding: 1px 0 0;}
+#yunshi #fod1 div span {display:block; height: 30px;}
+#yunshi #fod1 .as1{background-position:-60px -80px;}
+#yunshi #fod1 .as2 {background-position:-60px -110px;}
+#yunshi #fod1 .as3 {background-position:-60px -140px;}
+#yunshi #fod1 .as4 {background-position:-60px -170px;}
+#yunshi #fod1 .as5 {background-position:-60px -200px;}
+#yunshi #fod1 .as6 {background-position:-60px -230px;}
+#yunshi #fod1 .as7 {background-position:-60px -260px;}
+#yunshi #fod1 .as8 {background-position:-60px -290px;}
+#yunshi #fod1 .as9 {background-position:-60px -320px;}
+#yunshi #fod1 .as10 {background-position:-60px -350px;}
+#yunshi #fod1 .as11 {background-position:-60px -380px;}
+#yunshi #fod1 .as12 {background-position:-60px -410px;}
+#yunshi #fod1 .on {background-position:-160px -220px;}
+#yunshi #fod1 .on .as1{background-position:-88px -80px;}
+#yunshi #fod1 .on .as2 {background-position: -88px -110px;}
+#yunshi #fod1 .on .as3 {background-position: -88px -140px;}
+#yunshi #fod1 .on .as4 {background-position: -88px -170px;}
+#yunshi #fod1 .on .as5 {background-position: -88px -200px;}
+#yunshi #fod1 .on .as6 {background-position: -88px -230px;}
+#yunshi #fod1 .on .as7 {background-position: -88px -260px;}
+#yunshi #fod1 .on .as8 {background-position: -88px -290px;}
+#yunshi #fod1 .on .as9 {background-position: -88px -320px;}
+#yunshi #fod1 .on .as10 {background-position: -88px -350px;}
+#yunshi #fod1 .on .as11 {background-position: -88px -380px;}
+#yunshi #fod1 .on .as12 {background-position: -88px -410px;}
+
+#yunshi h3{font-size:22px; color:#E66497; font-weight:600; height:56px;  line-height:56px; border-bottom:1px solid #E6E6E8; margin-bottom:10px;}
+#yunshi h4{font-size:14px; color:#3398CC; height:38px; line-height:38px; }
+#yunshi h4 .star_b {background: url(../../img/astro/icon_star_3.gif) no-repeat 0 5px;display: inline-block;height: 21px; width: 90px;}
+#yunshi h4 .star_f {background: url(../../img/astro/icon_star_3.gif) no-repeat -90px 5px ;display: inline-block; height: 21px;}
+#yunshi p {margin:6px 0; line-height:20px;  }
+#yunshi .dis .lines{ border-bottom:1px dotted #FBB4DE; height:1px; overflow:hidden; padding-top:0; width:250px; margin-bottom:12px; }
+
+.querys{border:1px solid #E3C2F5; background:#F7E9FC; padding:4px;  }
+.querys .q_in{background:#fff; height:68px;}
+.querys .q_in ul{float:left;border-right: 1px solid #EAD1F8; height: 62px;padding: 9px 9px 0;width: 226px;}
+.querys .q_in ul li{height:22px; padding:2px 0; }
+.querys .q_in select{margin-right:4px;}
+.querys .q_in .sels1{width:70px;}
+.querys .q_in .sels2{width:151px;}
+.querys button { border: 0;color: #6D27BA;font-size: 12px;height: 20px;padding:0; width: 64px;}
+.querys .button1{background-position:-159px -270px;}
+.querys .button2{background-position:-159px -290px;  padding-right: 14px;}
+.querys .q_in .qlast{border-right:0;}
+
+#schannel .alb,
+#schannel h3
+{
+	background:url(../../img/astro/makeup_1.gif) no-repeat;
+}
+#schannel{height:auto; overflow:hidden;  background:#fff;border:1px solid #EAD1F8;}
+#schannel h3{font-size:14px; height:36px; line-height:38px; text-align:center;color:#7E3AA3; background-position: center -40px; background-repeat: repeat-x }
+#schannel .alb{height:210px; background-position: center 170px; background-repeat: repeat-x}
+#schannel .alb_9{
+	background: transparent; height: 200px;
+}
+#schannel .alb h4 {height:24px; line-height:25px; text-align:center;  width: 80px; margin: 0 auto 5px; overflow: hidden }
+#schannel .alb dl {float: left;width: 328px; height:auto; overflow:hidden; border-right:1px solid #EAD1F8; margin-top:12px;  padding-top:5px; padding-bottom:5px;}
+#schannel .alb .a1_0 {border-right:none;}
+#schannel .alb dl dt{float:left; width:120px; margin-left:10px; margin-right:5px; text-align: center;}
+#schannel .alb dl dt a {display:block;}
+#schannel .alb dl dt strong {font-size: 14px; display:block; margin: 5px 0;}
+#schannel .alb dl dd li{height:28px; line-height:28px; font-size:14px;}
+
+h4.tabtitle li{float:left;width:57px;height:26px;line-height:26px;margin-top:4px;text-align:center;cursor:pointer;}
+h4.tabtitle .cur{background:url(../../img/astro/makeup_1.gif) no-repeat -440px -330px;}
+#tab_Astro_box{height:250px;}
+/*.aitb .tbl,.tbc,.aitb .tbr,.amain,.aitb .afortune,.obox .obl,.obox .obc,.obox .obr,.obox .obb,.tbl{background:url(../../img/astro/astro_tbox.gif);}*/
+.aitb{overflow:hidden;}
+.aitb .tbl,.aitb .tbc,.aitb .tbr{height:290px;}
+.tbl{width: 8px;height: 290px;}
+.tbc{background-position:-8px 0;width:11px;height: 290px;}
+.aitb .tbr{background-position:-19px 0;width:8px;}
+.amain{background-position:0 -290px;width:850px;padding:5px;border: 5px solid #FCB2D3;border-radius: 10px;}
+.aitb .amain dt{height:420px;overflow:hidden;margin-left: 140px;margin-right: 140px;}
+.aitb .amain h1{font-size:52px;margin-top:10px;color:#db447f;font-family:微软雅黑,黑体;font-weight:600;padding:0;}
+.aitb .amain h1 strong{font-weight:600;}
+.aitb .amain h1 small{display:inline-block;margin-left:20px;font-size:24px;color:#4da4df;}
+.aitb .amain .ainfo{width:400px;margin-left:15px;font-size:33px;}
+.aitb .amain .ainfo p{line-height:150%;margin-top:10px;}
+.aitb .amain dd ul li,.aitb .afortune dt,.obox .obb h4,.aschannel .asbx h3{background:url(../../img/astro/astro_simg.gif) no-repeat;}
+.aitb .amain dd{overflow:hidden;font-size: 20px;margin-bottom: 20px;border-top: 2px solid #FCB2D3;padding-top: 20px;}
+.aitb .amain dd ul{padding:0 20px;margin-left: 20px; }
+.aitb .amain dd ul li{height:22px;line-height:22px;background-position:0 -60px;padding-left:14px;float:left;width:230px;padding-top: 7px;margin-left: 10px;text-align: left;}
+.aitb .amain dd .burl a{display:inline-block;margin:0 12px;}
+.aitb .afortune{width:338px;background-position:0 -290px;height:280px;padding:5px 0;}
+.aitb .afortune dt{height:42px;padding-left:50px;padding-top:8px;}
+.aitb .afortune dt strong{margin-bottom:5px;display:block;font-size:14px;color:#db447f;}
+.aitb .afortune dt strong a {color:#db447f;}
+.aitb .afortune dt small{color:gray;}
+.aitb .afortune dd{padding:0 10px;}
+.aitb .afortune dd .fudate{height:198px;margin-top:5px;}
+.aitb .afortune dd ul{height:91px;overflow:hidden;margin:0 auto;}
+.aitb .afortune dd li{float:left;width:159px;height:22px;line-height:22px;}
+.aitb .afortune dd li .star_b{background:url(../../img/astro/icon_star_1.gif) 0 0 no-repeat;width:70px;height:13px;display:inline-block;}
+.aitb .afortune dd li .star_f{background:url(../../img/astro/icon_star_1.gif) -70px 0 no-repeat;height:13px;display:inline-block;}
+.aitb .afortune dd .tdft{height:93px;margin-top:10px;overflow:hidden;}
+.aitb .afortune dd .murl a{display:inline-block;margin:0 7px;}
+.aitop .aib3{background-position:0 -116px;height:6px;display:block;clear:both;overflow:hidden;}
+.aschannel .asbx{width:490px;height:285px;border:solid 1px #edcef3;border-bottom:0;}
+.aschannel .asbxb{border-bottom:solid 1px #edcef3;}
+.aschannel .asbx h3{background-position:0 -90px;height:29px;font-size:14px;line-height:29px;color:#9348af;padding:0 5px 0 30px;}
+.aschannel .asbx h3 a{color:#9348af;font-weight:700;}
+.aschannel .asbx .acml{padding:10px;}
+.aschannel .asbx dl{clear:both;margin-bottom:10px;height:98px;}
+.aschannel .asbx dt{float:left;width:128px;height:98px;}
+.aschannel .asbx dt img{border:#DDD solid 1px;width:120px;height:90px;display:block;padding:3px;}
+.aschannel .asbx dd{float:left;width:330px;line-height:150%;margin-left:12px;}
+.aschannel .asbx dd strong{font-size:16px;margin-bottom:10px;display:block;}
+.aschannel .asbx dd strong a{color:#db447f;}
+.aschannel .asbx dd p,.aschannel .asbx dd p a{color:#777;line-height:180%;}
+.aschannel .asbx ul{clear:both;border-top:dashed 1px #dfdfdf;padding-top:10px;height:120px;}
+.aschannel .asbx ul li{float:left;width:235px;}
+.aschannel .asbx ul li small{color:#999;}
+.aschannel .asbx ul li a{color:#777;}
+.aschannel .asbxt {width: auto;height:255px; border-bottom: solid #F6CEC4 1px; margin-bottom: 5px; border-color: #F6CEC4}
+.aschannel .asbxt h3 {background-position: 0 -180px; color: #B5523C}
+.aschannel .asbxt h3 a {color: #B5523C}
+.aschannel .asbxt dd strong a{color:#538ECB;}
+.aschannel .asbxt .arec {float: left; width: 470px; margin-right: 14px;}
+.aschannel .asbxt ul {float: left; clear: none; border: none; border-left: solid #F6CEC4 1px; padding: 0 0 0 13px; width: 470px;height:210px;}
+.aschannel .asbxt ul li {line-height: 25px; height: 26px;}
+.aschannel .asrb{width:250px;}
+.obox{margin-top:10px;clear:both;}
+.obox .obl,.obox .obc,.obox .obr{height:310px;width:8px;}
+.obox .obl{background-position:0 -580px;}
+.obox .obc{background-position:-8px -580px;width:11px;}
+.obox .obr{background-position:-18px -580px;width:9px;}
+.obox .obb{background-position:0 -890px;height:300px;width:307px;padding:5px;}
+.obox .obb h4{height:30px;line-height:31px;font-size:14px;background-position:0 -130px;padding-left:30px;color:#db447f;overflow:hidden;}
+.obox .obb h4 a{font-size:12px;font-weight:100;}
+.obox .obb ul{margin-top:8px;}
+
+.pflink h4{color:#944CD4;border-color:#9C6CF4;}
+.blink{border:#E0C5FF solid 1px;margin-top:10px;width:988px;}
+.blink ul{float:left;border:#F2ECFD 3px solid;width:972px;padding:5px;}
+.blink li{float:left;white-space:nowrap;display:inline;overflow:visible;margin:4px 10px;}
+.blink .z{margin-bottom:-1px;}
+#schannel,.aschannel{margin-top:10px;}
+#schannel .al ul li,.obox .obb ul li{font-size:14px;height:26px;line-height:26px;}
+.aitb .amain dd .burl,.aitb .afortune dd .murl{height:26px;line-height:26px;}
+
+.t_blink {height:70px;}
+.t_blink strong {padding: 7px 5px;}
+.aitb .tbc{background-position: -19px 0;width: 8px;}
+.amain dt{height: 200px;}
+.aitb{position: relative;top: 80px;margin-left: 50px;margin-bottom: 70px;}
+
+.header {
+	border: none;
+	background: #4690cd;
+	left: 0;
+	right: 0;
+	width: 100%;
+	position: fixed;
+	height: 50px;
+	z-index: 1000;
+	padding-top: 20px;
+}
+
+.header .smart-return-btn {
+	top: 15px;
+	padding-left: 5px;
+	width: 55px;
+	height: 30px;
+	line-height: 30px;
+	text-shadow: none;
+	box-shadow: none;
+	border: 0px;
+	border-radius: 0px;
+	color: #4690cd;
+	background: url("../../img/astro/icon.png") 0 -100px no-repeat;
+	float: left;
+	margin-left: 70px;
+}
+
+.header .smart-return-btn span {
+	font-size: 14px;
+	border: 0px;
+	border-radius: 0px;
+}
+
+.ui-btn-inner {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	zoom: 1;
+	border-top: 1px solid #fff;
+	border-color: rgba(255,255,255,.3);
+}
+
+.header .smart-return-btn,.header .smart-return-btn:hover{
+	text-decoration: none;
+}
