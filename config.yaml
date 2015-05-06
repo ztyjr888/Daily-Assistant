@@ -1,0 +1,7 @@
+name: wxmain
+version: 1000
+cron:
+	- description: cron test
+      url: counter/counter_index.php
+      schedule: "59 23 * * *"
+      timezone: Beijing
